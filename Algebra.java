@@ -104,36 +104,31 @@ public class Algebra {
 	public static int div(int x1, int x2) {
 		
 
+		int absx1 = Math.abs(x1) ;                            
+		int absx2 = Math.abs(x2);                                          
+		int count = 0;
+		int i = absx1;
 		
-        int i = x1 ;                            
-		int count = 0;                                          
-		                                            
-							
-		if( x1 < x2) {
-           return 0;              
+		while (i >= absx2) {
+			i = minus(i, absx2);
+			count++;
 		}
-        while ( i >= x2) {       
-			
-		i = minus(i, x2);      
-		    count++;
-		  }
-
 		
-		return count;
+		if ((x1 < 0 && x2 > 0 ) || x1 > 0 && x2 < 0) {
+
+	       return -count;
+	}	
+	
+             return count;
+		
 	
     }
 
 	// Returns x1 % x2
 	public static int mod(int x1, int x2) {
 		
-		if( x1 < x2)
-             return x1;
 
-		int n = x1;
-
-		for( int i = 0; i >= x2; i ++ )
-		    i= minus(n, x2);
-			
+		
 		
 		
 		
