@@ -127,16 +127,20 @@ public class Algebra {
 	// Returns x1 % x2
 	public static int mod(int x1, int x2) {
 		
+    int i = div(x1, x2);
 
+	int s = times(i, x2);
+
+	int v = minus(x1, s);
 		
 		
-		
-		
-		return n;
+		return v ;
 	}	
 
 	// Returns the integer part of sqrt(x) 
 	public static int sqrt(int x) {
+		
+
 		
 
 		
